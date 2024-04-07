@@ -52,7 +52,6 @@ def cumsum_fix(input, cumsum_func, *args, **kwargs):
     return cumsum_func(input, *args, **kwargs)
 
 
-# MPS workaround for https://github.com/AUTOMATIC1111/stable-diffusion-webui/pull/14046
 def interpolate_with_fp32_fallback(orig_func, *args, **kwargs) -> Tensor:
     try:
         return orig_func(*args, **kwargs)

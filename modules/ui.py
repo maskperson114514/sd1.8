@@ -1156,7 +1156,7 @@ def create_ui():
                 if ifid not in ["extensions", "settings"]:
                     loadsave.add_block(interface, ifid)
 
-            loadsave.add_component(f"webui/Tabs@{tabs.elem_id}", tabs)
+            loadsave.add_component(f"grdui/Tabs@{tabs.elem_id}", tabs)
 
             loadsave.setup_ui()
 
@@ -1239,4 +1239,4 @@ def setup_ui_api(app):
     app.add_api_route("/internal/sysinfo-download", lambda: download_sysinfo(attachment=True), methods=["GET"])
 
     import fastapi.staticfiles
-    app.mount("/webui-assets", fastapi.staticfiles.StaticFiles(directory=launch_utils.repo_dir('stable-diffusion-webui-assets')), name="webui-assets")
+    app.mount("/grdui-assets", fastapi.staticfiles.StaticFiles(directory=launch_utils.repo_dir('stable-diffusion-grdui-assets')), name="grdui-assets")

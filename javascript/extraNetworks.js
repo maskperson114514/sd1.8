@@ -278,7 +278,7 @@ function extraNetworksTreeProcessFileClick(event, btn, tabname, extra_networks_t
      *
      * @param event                     The generated event.
      * @param btn                       The clicked `tree-list-item` button.
-     * @param tabname                   The name of the active tab in the sd webui. Ex: txt2img, img2img, etc.
+     * @param tabname                   The name of the active tab in the sd grdui. Ex: txt2img, img2img, etc.
      * @param extra_networks_tabname    The id of the active extraNetworks tab. Ex: lora, checkpoints, etc.
      */
     // NOTE: Currently unused.
@@ -297,7 +297,7 @@ function extraNetworksTreeProcessDirectoryClick(event, btn, tabname, extra_netwo
      *
      * @param event                     The generated event.
      * @param btn                       The clicked `tree-list-item` button.
-     * @param tabname                   The name of the active tab in the sd webui. Ex: txt2img, img2img, etc.
+     * @param tabname                   The name of the active tab in the sd grdui. Ex: txt2img, img2img, etc.
      * @param extra_networks_tabname    The id of the active extraNetworks tab. Ex: lora, checkpoints, etc.
      */
     var ul = btn.nextElementSibling;
@@ -370,7 +370,7 @@ function extraNetworksTreeOnClick(event, tabname, extra_networks_tabname) {
      * then calls the appropriate function.
      *
      * @param event                     The generated event.
-     * @param tabname                   The name of the active tab in the sd webui. Ex: txt2img, img2img, etc.
+     * @param tabname                   The name of the active tab in the sd grdui. Ex: txt2img, img2img, etc.
      * @param extra_networks_tabname    The id of the active extraNetworks tab. Ex: lora, checkpoints, etc.
      */
     var btn = event.currentTarget;
@@ -390,7 +390,7 @@ function extraNetworksControlSortOnClick(event, tabname, extra_networks_tabname)
      * various sorting modes.
      *
      * @param event                     The generated event.
-     * @param tabname                   The name of the active tab in the sd webui. Ex: txt2img, img2img, etc.
+     * @param tabname                   The name of the active tab in the sd grdui. Ex: txt2img, img2img, etc.
      * @param extra_networks_tabname    The id of the active extraNetworks tab. Ex: lora, checkpoints, etc.
      */
     var curr_mode = event.currentTarget.dataset.sortmode;
@@ -424,7 +424,7 @@ function extraNetworksControlSortDirOnClick(event, tabname, extra_networks_tabna
      * ascending and descending sort directions.
      *
      * @param event                     The generated event.
-     * @param tabname                   The name of the active tab in the sd webui. Ex: txt2img, img2img, etc.
+     * @param tabname                   The name of the active tab in the sd grdui. Ex: txt2img, img2img, etc.
      * @param extra_networks_tabname    The id of the active extraNetworks tab. Ex: lora, checkpoints, etc.
      */
     if (event.currentTarget.dataset.sortdir == "Ascending") {
@@ -444,7 +444,7 @@ function extraNetworksControlTreeViewOnClick(event, tabname, extra_networks_tabn
      * Toggles the tree view in the extra networks pane.
      *
      * @param event                     The generated event.
-     * @param tabname                   The name of the active tab in the sd webui. Ex: txt2img, img2img, etc.
+     * @param tabname                   The name of the active tab in the sd grdui. Ex: txt2img, img2img, etc.
      * @param extra_networks_tabname    The id of the active extraNetworks tab. Ex: lora, checkpoints, etc.
      */
     gradioApp().getElementById(tabname + "_" + extra_networks_tabname + "_tree").classList.toggle("hidden");
@@ -461,7 +461,7 @@ function extraNetworksControlRefreshOnClick(event, tabname, extra_networks_tabna
      * is it manually raises a `click` event on that button.
      *
      * @param event                     The generated event.
-     * @param tabname                   The name of the active tab in the sd webui. Ex: txt2img, img2img, etc.
+     * @param tabname                   The name of the active tab in the sd grdui. Ex: txt2img, img2img, etc.
      * @param extra_networks_tabname    The id of the active extraNetworks tab. Ex: lora, checkpoints, etc.
      */
     var btn_refresh_internal = gradioApp().getElementById(tabname + "_" + extra_networks_tabname + "_extra_refresh_internal");

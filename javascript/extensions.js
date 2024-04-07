@@ -61,10 +61,10 @@ function config_state_confirm_restore(_, config_state_name, config_restore_type)
     let restored = "";
     if (config_restore_type == "extensions") {
         restored = "all saved extension versions";
-    } else if (config_restore_type == "webui") {
-        restored = "the webui version";
+    } else if (config_restore_type == "grdui") {
+        restored = "the grdui version";
     } else {
-        restored = "the webui version and all saved extension versions";
+        restored = "the grdui version and all saved extension versions";
     }
     let confirmed = confirm("Are you sure you want to restore from this state?\nThis will reset " + restored + ".");
     if (confirmed) {
