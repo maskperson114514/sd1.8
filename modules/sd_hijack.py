@@ -189,7 +189,7 @@ class StableDiffusionModelHijack:
             undo_optimizations()
 
     def convert_sdxl_to_ssd(self, m):
-        """Converts an SDXL model to a Segmind Stable Diffusion model (see https://huggingface.co/segmind/SSD-1B)"""
+        """Converts an SDXL model to a Segmind sd 1.8 model (see https://huggingface.co/segmind/SSD-1B)"""
 
         delattr(m.model.diffusion_model.middle_block, '1')
         delattr(m.model.diffusion_model.middle_block, '2')

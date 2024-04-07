@@ -1,4 +1,4 @@
-// Stable Diffusion grdui - Bracket checker
+// sd 1.8 grdui - Bracket checker
 // By Hingashi no Florin/Bwin4L & @akx
 // Counts open and closed brackets (round, square, curly) in the prompt and negative prompt text boxes in the txt2img and img2img tabs.
 // If there's a mismatch, the keyword counter turns red and if you hover on it, a tooltip tells you what's wrong.
