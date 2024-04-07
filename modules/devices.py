@@ -100,9 +100,6 @@ def torch_npu_set_device():
 
 def enable_tf32():
     if torch.cuda.is_available():
-
-        # enabling benchmark option seems to enable a range of cards to do fp16 when they otherwise can't
-        # see https://github.com/AUTOMATIC1111/stable-diffusion-webui/pull/4407
         if cuda_no_autocast():
             torch.backends.cudnn.benchmark = True
 
